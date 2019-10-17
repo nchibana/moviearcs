@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <title>Plotting the Emotional Arcs of Movie Scripts | Nayomi Chibana</title>
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- jQuery UI CSS -->
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
+        <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+        <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+        <link rel="stylesheet" href="css/jquery.auto-complete.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://use.typekit.net/bvu7ywd.js"></script>
+        <style type="text/css">.tk-azo-sans-web{font-family:"azo-sans-web",sans-serif;}</style>
+        <style type="text/css">@font-face{font-family:tk-azo-sans-web-n7;src:url(https://use.typekit.net/af/9aa4fe/000000000000000000013f4e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/9aa4fe/000000000000000000013f4e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/9aa4fe/000000000000000000013f4e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:tk-azo-sans-web-i4;src:url(https://use.typekit.net/af/b714ca/000000000000000000013f4b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/b714ca/000000000000000000013f4b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/b714ca/000000000000000000013f4b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:tk-azo-sans-web-n3;src:url(https://use.typekit.net/af/bdcabe/000000000000000000013f48/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/bdcabe/000000000000000000013f48/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/bdcabe/000000000000000000013f48/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;}@font-face{font-family:tk-azo-sans-web-n4;src:url(https://use.typekit.net/af/9dc3b1/000000000000000000013f8f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/9dc3b1/000000000000000000013f8f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/9dc3b1/000000000000000000013f8f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:tk-azo-sans-web-n2;src:url(https://use.typekit.net/af/b4a4b5/000000000000000000014a32/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3) format("woff2"),url(https://use.typekit.net/af/b4a4b5/000000000000000000014a32/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3) format("woff"),url(https://use.typekit.net/af/b4a4b5/000000000000000000014a32/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3) format("opentype");font-weight:200;font-style:normal;}</style>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    </head>
+
+    <body>  
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Movie Arcs</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                </ul>
+                </div>
+            </div>
+            </nav>
+
+        <!-- Bootstrap grid setup -->
+        <div class="text-center" id="title">
+            <h1>EMOTIONAL ARCS OF MOVIE SCRIPTS</h1>
+            <p>Search for a movie to view its emotional trajectory and five other movies with the most similar arcs.</p>
+        </div>
+            <div class="container">
+                <div id="selections" class="row">
+                    <div class="col-md-4">
+                        <div id="slider-div">
+                            <label>% of Script <span id="dateLabel1">0</span> <span id="dateLabel2">1</span></label>
+                            <div id="date-slider"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <input id="var-select" class="form-control" placeholder="search for a movie">
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" id="download" class="btn btn-danger">Download Chart</button>
+                    </div>
+                </div>
+                <div class="row" id="charts">
+                    <div class="col-md-4" id="chart-area1"></div>
+                    <div class="col-md-4" id="chart-area2"></div>  
+                    <div class="col-md-4" id="chart-area3"></div>  
+                    <div class="col-md-4" id="chart-area4"></div>  
+                    <div class="col-md-4" id="chart-area5"></div>
+                    <div class="col-md-4" id="chart-area6"></div>  
+                </div>
+            </div>
+                <footer class="footer">
+                    <section id="lab_social_icon_footer">
+                    <!-- Include Font Awesome Stylesheet in Header -->
+                    <div class="container">
+                            <div class="text-left">
+                            <span id="name">NAYOMI CHIBANA</span>
+                                    <a href="https://www.linkedin.com/in/nchibana/" target="_blank"><i id="social-gp" class="fa fa-linkedin-square fa-3x social"></i></a>
+                                    <a href="https://twitter.com/nchibana" target="_blank"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                                    <a href="mailto:nchibana@gmail.com" target="_blank"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+                        </div>
+                    </div>
+                    </section>
+			</footer>
+    <!-- External JS libraries -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="js/jquery.auto-complete.min.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/autocomp.js"></script>
+    <script src="js/saveSvgAsPng.js"></script>
+    <!-- Custom JS -->
+    <script src="js/lineChart.js"></script>
+    <script src="js/main.js"></script>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+

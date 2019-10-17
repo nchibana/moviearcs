@@ -1,0 +1,6 @@
+[submodule "imsdb_download_all_scripts"]
+	path = imsdb_download_all_scripts
+	url = https://github.com/nchibana/moviearcs
+[submodule "storyplotapi"]
+	path = storyplotapi
+	url = https://github.com/nchibana/moviearcs
