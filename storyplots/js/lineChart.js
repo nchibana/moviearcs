@@ -1,9 +1,3 @@
-/*
-*    main.js
-*    Mastering Data Visualization with D3.js
-*    10.4 - Converting our code to OOP
-*/
-
 var arr;
 
 LineChart = function(_parentElement, _movie){

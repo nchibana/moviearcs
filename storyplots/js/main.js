@@ -1,8 +1,3 @@
-/*
-*    main.js
-*    Mastering Data Visualization with D3.js
-*    10.4 - Converting our code to OOP
-*/
 var ItemSelect;
 var filteredData;
 var lineChart1,
